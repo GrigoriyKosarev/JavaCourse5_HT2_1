@@ -46,6 +46,7 @@ public class ht_2_1 {
     }
 
     static int min(int[] numbers_int){
+
         int result = 1000000000;
         for (int i = 0; i < (numbers_int.length); i++ ){
             if(result > numbers_int[i]){
