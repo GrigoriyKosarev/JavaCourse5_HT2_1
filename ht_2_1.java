@@ -47,7 +47,7 @@ public class ht_2_1 {
 
     static int min(int[] numbers_int){
 
-        int result = 1000000000;
+        int result = numbers_int[0];
         for (int i = 0; i < (numbers_int.length); i++ ){
             if(result > numbers_int[i]){
                 result = numbers_int[i];
@@ -57,7 +57,7 @@ public class ht_2_1 {
     }
 
     static double min(double[] numbers_double){
-        double result = 1000000000;
+        double result = numbers_double[0];
         for (int i = 0; i < (numbers_double.length); i++ ){
             if(result > numbers_double[i]){
                 result = numbers_double[i];
@@ -67,7 +67,7 @@ public class ht_2_1 {
     }
 
     static int max(int[] numbers_int){
-        int result = -1000000000;
+        int result = -numbers_int[0];
         for (int i = 0; i < (numbers_int.length); i++ ){
             if(result < numbers_int[i]){
                 result = numbers_int[i];
@@ -77,7 +77,7 @@ public class ht_2_1 {
     }
 
     static double max(double[] numbers_double){
-        double result = -1000000000;
+        double result = -numbers_double[0];
         for (int i = 0; i < (numbers_double.length); i++ ){
             if(result < numbers_double[i]){
                 result = numbers_double[i];
@@ -87,7 +87,7 @@ public class ht_2_1 {
     }
 
     static int maxPositive(int[] numbers_int){
-        int result = -1000000000;
+        int result = -numbers_int[0];
         for (int i = 0; i < (numbers_int.length); i++ ){
             if(result < numbers_int[i] && numbers_int[i] > 0){
                 result = numbers_int[i];
@@ -97,7 +97,7 @@ public class ht_2_1 {
     }
 
     static double maxPositive(double[] numbers_double){
-        double result = -1000000000;
+        double result = -numbers_double[0];
         for (int i = 0; i < (numbers_double.length); i++ ){
             if(result < numbers_double[i] && numbers_double[i] > 0){
                 result = numbers_double[i];
@@ -127,10 +127,7 @@ public class ht_2_1 {
         int firstElement = numbers_int[0];
         int lastElement  = numbers_int[numbers_int.length-1];
 
-        if(firstElement > 0)
-            System.out.println("modulusInt= " + firstElement);
-        else
-            System.out.println("modulusInt= " + -1*firstElement);
+        System.out.println("modulusdInt " + firstElement % lastElement);
 
     }
 
@@ -138,10 +135,7 @@ public class ht_2_1 {
         double firstElement = numbers_double[0];
         double lastElement  = numbers_double[numbers_double.length-1];
 
-        if(firstElement > 0)
-            System.out.println("modulusInt= " + firstElement);
-        else
-            System.out.println("modulusInt= " + -1*firstElement);
+        System.out.println("modulusdDouble " + firstElement % lastElement);
     }
 
     static int secondLargest(int[] numbers_int){

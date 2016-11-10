@@ -6,19 +6,19 @@ public class ht_2_2 {
 
         double balance = 100;
         double withdrawal = 10;
+        double comission = 5;
 
-        withdrawal(balance, withdrawal);
+        withdrawal(balance, withdrawal, comission);
 
         balance = 100;
         withdrawal = 99;
 
-        withdrawal(balance, withdrawal);
+        withdrawal(balance, withdrawal, comission);
 
     }
 
-    public static void withdrawal(double balance, double withdrawal){
+    public static void withdrawal(double balance, double withdrawal, double comission){
 
-        double comission = 5;
         double comissionPrice = (withdrawal/100*comission);
         double ballanceToWithdrawal = withdrawal + comissionPrice;
 
