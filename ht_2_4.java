@@ -9,18 +9,19 @@ public class ht_2_4 {
         String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
 
         String ownerName = "Oww";
-        double withdrawal = 100;
+        int withdrawal = 100;
 
         fund(balances, ownerNames, ownerName, withdrawal);
 
     }
 
-    public static void fund(int[] balances, String[] ownerNames, String ownerName, double withdrawal){
+    public static void fund(int[] balances, String[] ownerNames, String ownerName, int withdrawal){
 
         for (int i = 0; i < (ownerNames.length); i++ ){
-            if (ownerNames[i] == ownerName) {
-                double balance = balances[i]+withdrawal;
+            if (ownerNames[i].equals(ownerName)) {
+                int balance = balances[i]+withdrawal;
                 System.out.println(ownerName + " " + balance);
+                balances[i] = balance;
             }
         }
 

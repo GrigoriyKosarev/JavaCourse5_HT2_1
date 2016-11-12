@@ -22,8 +22,8 @@ public class ht_2_1 {
         System.out.println("multiplicationInt= " + multiplication(numbers_int));
         System.out.println("multiplicationDouble= " + multiplication(numbers_double));
 
-        modulus(numbers_int);
-        modulus(numbers_double);
+        System.out.println("modulusdInt " + modulus(numbers_int));
+        System.out.println("modulusdDouble " + modulus(numbers_double));
 
         System.out.println("secondLargestInt= " + secondLargest(numbers_int));
         System.out.println("secondLargestDouble= " + secondLargest(numbers_double));
@@ -77,7 +77,7 @@ public class ht_2_1 {
     }
 
     static double max(double[] numbers_double){
-        double result = -numbers_double[0];
+        double result = numbers_double[0];
         for (int i = 0; i < (numbers_double.length); i++ ){
             if(result < numbers_double[i]){
                 result = numbers_double[i];
@@ -122,20 +122,22 @@ public class ht_2_1 {
         return result;
     }
 
-    static void modulus(int[] numbers_int){
+    static int modulus(int[] numbers_int){
 
         int firstElement = numbers_int[0];
         int lastElement  = numbers_int[numbers_int.length-1];
 
-        System.out.println("modulusdInt " + firstElement % lastElement);
+        /*System.out.println("modulusdInt " + firstElement % lastElement);*/
+        return firstElement % lastElement;
 
     }
 
-    static void modulus(double[] numbers_double){
+    static double modulus(double[] numbers_double){
         double firstElement = numbers_double[0];
         double lastElement  = numbers_double[numbers_double.length-1];
 
-        System.out.println("modulusdDouble " + firstElement % lastElement);
+        /*System.out.println("modulusdDouble " + firstElement % lastElement);*/
+        return firstElement % lastElement;
     }
 
     static int secondLargest(int[] numbers_int){

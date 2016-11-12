@@ -7,28 +7,31 @@ public class ht_2_3 {
 
         int[] balances = {1200, 250, 2000, 500, 3200};
         String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
-        double comission = 5;
+        int comission = 5;
 
         String ownerName = "Ann";
-        double withdrawal = 100;
+        int withdrawal = 100;
         withdraw(balances, ownerNames, ownerName, withdrawal, comission);
 
+        balances = new int[]{1200, 250, 2000, 500, 3200};
         ownerName = "Oww";
         withdrawal = 490;
         withdraw(balances, ownerNames, ownerName, withdrawal, comission);
 
     }
 
-    public static void withdraw(int[] balances, String[] ownerNames, String ownerName, double withdrawal, double comission){
+    public static void withdraw(int[] balances, String[] ownerNames, String ownerName, int withdrawal, int comission){
 
-        double comissionPrice = (withdrawal/100*comission);
-        double ballanceToWithdrawal = withdrawal + comissionPrice;
+        int comissionPrice = (withdrawal/100*comission);
+        int ballanceToWithdrawal = withdrawal + comissionPrice;
 
         for (int i = 0; i < (ownerNames.length); i++ ){
-            if (ownerNames[i] == ownerName) {
+            if (ownerNames[i].endsWith(ownerName)) {
                 int balance = balances[i];
-                if (ballanceToWithdrawal <= balance)
+                if (ballanceToWithdrawal <= balance){
                     System.out.println(ownerName + " " + withdrawal + " " +(balance-ballanceToWithdrawal));
+                    balances[i] = balance-ballanceToWithdrawal;
+                }
                 else
                     System.out.println(ownerName + " NO");
             }
