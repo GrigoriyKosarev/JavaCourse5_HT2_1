@@ -26,7 +26,7 @@ public class ht_2_3 {
         int ballanceToWithdrawal = withdrawal + comissionPrice;
 
         for (int i = 0; i < (ownerNames.length); i++ ){
-            if (ownerNames[i].endsWith(ownerName)) {
+            if (ownerNames[i].equals(ownerName)) {
                 int balance = balances[i];
                 if (ballanceToWithdrawal <= balance){
                     System.out.println(ownerName + " " + withdrawal + " " +(balance-ballanceToWithdrawal));
